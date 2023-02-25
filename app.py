@@ -10,11 +10,11 @@ from random import randint
 def init():
     global model
     
-    device = 0 if torch.cuda.is_available() else -1
     model = build_model()
 
 
 def text2audio(text, duration, guidance_scale, random_seed, n_candidates):
+    global model
     # print(text, length, guidance_scale)
     waveform = text_to_audio(
         model,
