@@ -9,8 +9,9 @@ from random import randint
 # Load your model to GPU as a global variable here using the variable name "model"
 def init():
     global model
-    
+    print("build model")
     model = build_model()
+    print("build model done")
 
 
 def text2audio(text, duration, guidance_scale, random_seed, n_candidates):
